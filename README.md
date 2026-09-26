@@ -20,10 +20,43 @@ The system will take an image as input and output a bounding box around each det
 The project will use the YOLOv8 object detection model to detect license plates in images. 
 
 **Data plan:**
-***Source:*** Public license plate detection dataset or a dataset collected from parking lots.
 
-    **Size:** Approximately 500–1,000 labeled images.
+      Source: Public license plate detection dataset or a dataset collected from parking lots.
 
-    **Labels:** Each license plate will be labeled with a bounding box using the `license_plate` class.
+      Size: Approximately 500–1,000 labeled images.
 
-    **Link:** A public dataset link will be added if a public dataset is selected.
+      Labels: Each license plate will be labeled with a bounding box using the `license_plate` class.
+
+      Link: A public dataset link will be added if a public dataset is selected.
+
+**Success Metrics**
+
+      Primary metric: mAP (mean Average Precision) for license plate detection.
+
+      Primary target: Achieve at least 80% mAP on unseen test images.
+
+      Secondary metric: The model should successfully detect license plates in a variety of images with different vehicle positions and backgrounds.
+
+      Secondary target: Detect most clearly visible license plates without producing excessive false detections.
+
+## Milestone Plan
+
+| Phase                   | Goal                                                        | Milestone                                 | 16-Week Term | 10-Week Term |
+| ----------------------- | ----------------------------------------------------------- | ----------------------------------------- | ------------ | ------------ |
+| **Blueprint**           | Plan the license plate detector                             | Midterm submitted                         | Week 10      | Week 5       |
+| **First Working Demo**  | Get YOLOv8 running on sample images                         | Something works, even if rough            | Week 11      | Week 6       |
+| **Make It Yours**       | Add the license plate dataset and train/customize the model | System works on the license plate problem | Weeks 12–13  | Weeks 7–8    |
+| **Improve and Measure** | Test the model and measure its performance                  | Metrics recorded                          | Week 14      | Week 9       |
+| **Package and Present** | Finish README, slides, AI usage log, and demo               | Final submitted                           | Week 15      | Week 10      |
+
+**Top Risks + Plan B:**
+
+      Risk 1: The public dataset may not have enough good-quality license plate images.
+      
+      Plan B: Use another public dataset or collect additional images from parking lots.
+      
+      Risk 2: Training the YOLOv8 model may not produce good detections.
+      
+      Plan B: Start with a pretrained YOLOv8 model, reduce the project scope, and use the pretrained model for the working proof of concept.
+
+Ai usage Log is added to the GitHub repository
